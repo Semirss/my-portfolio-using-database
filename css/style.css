@@ -1,18 +1,10 @@
-/*
-********* Template CSS *********
-  =>  Template Name    : CCBD-Protfolio - Personal Portfolio HTML Template
 
-  =>  Template Author  : Code Camp BD
-
-  =>  Author Website   : https://developerrony.com/
-
-
-*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 h1,h2,h3,p,h4,h5,h6{
     color: #fff;
 }
@@ -479,7 +471,6 @@ p.s{
 .team-item:hover .team-text div {
     margin-left: 30px;
 }
-
 
 /*** Testimonial ***/
 .testimonial-left,
