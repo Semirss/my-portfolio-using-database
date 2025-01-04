@@ -32,7 +32,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51" >
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -41,18 +41,21 @@
     </div>
     <!-- Spinner End -->
 
-    <header>
+    <header >
         <nav>
             <ul>
                 <li><a href="#hero">Home</a></li>
-                <li><a href="#address">Address</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skill">Skills</a></li>
                 <li><a href="#map">Map</a></li>
+                <li><a href="blog.html">Blog</a></li>
+
+                <li><a href="adminlogin.php">Admin</a></li>
                 <li style=" background-color:#6f42c1;margin-top: -5px; padding: 5px;border-radius: 1em;"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-  
+ 
     <section id="hero">
     <div class="right"><img src="img/149691609.png" alt=""></div>
 
@@ -69,13 +72,13 @@
     </section>
  
     <!-- Expertise Start -->
-    <div class="container-xxl py-6 pb-5" id="skill">
+    <div class="container-xxl py-6 pb-5" >
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="display-5 mb-5">Skills & Experience</h1>
+                <div id="about" class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="margin-top: -60px;">
+                    <h1 class="display-5 mb-5">About me</h1>
                     <p class="mb-4">I'm a passionate web developer with over 2 years of experience designing, building, and optimizing websites and web applications. I specialize in creating responsive, user-friendly designs with efficient, scalable code. My expertise spans front-end and back-end development, and I am dedicated to creating easy-to-navigate, high-quality digital solutions tailored to client needs</p><hr>
-                    <h3 class="mb-4">My Skills</h3>
+                    <h3 id="skill" class="mb-4">My Skills & Experience</h3>
                     <div class="row align-items-center">
                         <div class="col-md-6">
                             <div class="skill mb-4">
@@ -136,7 +139,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div><br>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
                         <li class="nav-item w-50">
@@ -272,12 +275,12 @@ $conn->close();
 <!-- Projects End -->
 
 
-    <!-- Team Start -->
+    <!-- services Start -->
     <div class="container-xxl py-6 pb-5" id="team">
         <div class="container">
             <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">Team Members</h1>
+                    <h1 class="display-5 mb-0">Services</h1>
                 </div>
                 <div class="col-lg-6 text-lg-end">
                     <a class="btn btn-primary py-3 px-5" href="">Contact Us</a>
@@ -290,7 +293,7 @@ $conn->close();
                         <div class="team-text bg-white rounded-end p-4">
                             <div>
                                 <h5 style="color: black;">Semir Sultan</h5>
-                                <span style="color: black;">Web Developer</span>
+                                <span style="color: black;">I have made a couple of web sites and projects over the years so i am certain i am able to deliver to any enquiries.<hr> Detailes are in the project section <a href="#project">projects</a> </span>
                             </div>
                             <i class="fa fa-arrow-right fa-2x text-primary"></i>
                         </div>
@@ -301,8 +304,8 @@ $conn->close();
                         <img class="img-fluid rounded" src="img/team-2.jpg" alt="">
                         <div class="team-text bg-white rounded-end p-4">
                             <div>
-                                <h5 style="color: black;">Need Collab</h5>
-                                <span style="color: black;">Designer</span>
+                                <h5 style="color: black;">Client</h5>
+                                <span style="color: black;">No clients till now <hr> <a href="#contact">contact me</a></span>
                             </div>
                             <i class="fa fa-arrow-right fa-2x text-primary"></i>
                         </div>
@@ -313,8 +316,8 @@ $conn->close();
                         <img class="img-fluid rounded" src="img/team-3.jpg" alt="">
                         <div class="team-text bg-white rounded-end p-4">
                             <div>
-                                <h5 style="color: black;">Need Collab</h5>
-                                <span style="color: black;">UI/UX Designer</span>
+                                <h5 style="color: black;">Client</h5>
+                                <span style="color: black;">No clients till now <hr> <a href="#contact">contact me</a></span>
                             </div>
                             <i class="fa fa-arrow-right fa-2x text-primary"></i>
                         </div>
@@ -323,8 +326,8 @@ $conn->close();
             </div>
         </div>
     </div>
-    <!-- Team End -->
-
+    <!-- services End -->
+<!-- Blog Start -->
 <!-- Contact Start -->
 <?php
 // Database credentials
