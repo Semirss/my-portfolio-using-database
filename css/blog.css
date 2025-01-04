@@ -1,0 +1,105 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #000000;
+    color: #ffffff;
+}
+
+.blog {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 220px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card .content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 10px;
+}
+
+.cta {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.cta:hover {
+    background: #222;
+    color: #fff;
+}
+
+/* Background gradients for each card */
+.card.food {
+    background: linear-gradient(135deg, #0978c6, #03384c);
+}
+
+.card.architecture {
+    background: linear-gradient(135deg, #1b2838, #34445d);
+}
+
+.card.travel {
+    background: linear-gradient(135deg, #d8b78e, #482a02);
+}
+
+.card.interior {
+    background: linear-gradient(135deg, #0c94ca, #03161e);
+}
+
+.card.photography {
+    background: linear-gradient(135deg, #d8b78e, #482a02);
+}
