@@ -1,19 +1,7 @@
 <?php
+include "dbcon.php";
 session_start();
 
-// Database credentials
-$servername = "localhost"; // Update with your database server
-$username = "root"; // Update with your database username
-$password = ""; // Update with your database password
-$dbname = "portfolio"; // Database name
-
-// Create a database connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check the connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 // Check if admin is logged in
 if (!isset($_SESSION['admin_logged_in'])) {
@@ -174,9 +162,10 @@ $conn->close();
 <header>
     <nav>
         <ul>
-            <h1>💗Welcome <?php echo htmlspecialchars($_SESSION['admin_name']); ?></h1>
             <form action="logout.php" method="POST">
-                <button type="submit" style="color:#fff; background-color:#6f42c1;margin-top: -5px;">Logout</button>
+            <h1>💗Welcome <?php echo htmlspecialchars($_SESSION['admin_name']); ?></h1>
+   
+            <button type="submit" style="color:#fff; background-color:#6f42c1;margin-top: -5px;">Logout</button>
             </form>            
         </ul>
     </nav>
@@ -188,7 +177,7 @@ $conn->close();
 <?php if (isset($error)) { ?>
     <p class="error" style="color: red;"><?php echo $error; ?></p>
 <?php } ?>
-
+<div class="section-container">
 <div class="section">
     <form method="POST" enctype="multipart/form-data">
         <h2>Add New Project</h2>
@@ -209,9 +198,9 @@ $conn->close();
         <button type="submit" name="add_project">Add Project</button>
     </form>
 </div>
-<h3>Update Existing Project</h3> 
 <div class="section" style="margin-top: -10px;">
-   
+   <h2>Update Existing Project</h2> 
+
   <form method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label for="id">Project ID:</label>
@@ -237,7 +226,7 @@ $conn->close();
         </div>
         <button type="submit" name="update_project">Update Project</button>
     </form>
-</div>
+</div></div>
 <h2>Existing Projects</h2>
 <table>
     <thead>
