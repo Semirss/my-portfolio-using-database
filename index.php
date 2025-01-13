@@ -47,7 +47,7 @@
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skill">Skills</a></li>
-                <li><a href="#map">Map</a></li>
+                <li><a href="#project">Projects</a></li>
                 <li><a href="blog.html">Blog</a></li>
 
                 <li><a href="adminlogin.php">Admin</a></li>
@@ -229,20 +229,7 @@
         </div>
         <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
         <?php
-// Database credentials
-$servername = "localhost"; // Update with your database server
-$username = "root"; // Update with your database username
-$password = ""; // Update with your database password
-$dbname = "portfolio"; // Database name
-
-// Create a database connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check the connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+include "dbcon.php";
 // Fetch projects from the database
 $sql = "SELECT * FROM projects";
 $result = $conn->query($sql);
@@ -330,19 +317,8 @@ $conn->close();
 <!-- Blog Start -->
 <!-- Contact Start -->
 <?php
-// Database credentials
-$servername = "localhost"; // Update with your database server
-$username = "root"; // Update with your database username
-$password = ""; // Update with your database password
-$dbname = "portfolio"; // Database name
+include "dbcon.php";
 
-// Create a database connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check the connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get form input
